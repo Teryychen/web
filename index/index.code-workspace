@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "index",
+			"path": "."
+		},
+		{
+			"name": "video",
+			"path": "../video"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "index"
+	}
+}
