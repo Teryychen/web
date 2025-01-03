@@ -1,5 +1,8 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url(/index/Picture/taurus.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-section {
@@ -20,12 +23,84 @@ body {
     padding-left: 70px;  
     margin-top: 5px;
     }
+
+   #timeline {
+    background-color: #482203b5; /* Màu nền */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0;
+    align-items: center;
+}
+
+#timeline h2 {
+    text-align: center;
+    color: white;
+    background-color: rgb(2, 0, 0); /* Màu vàng tiêu đề */
+    padding: 10px 20px;
+    border-radius: 5px; /* Thêm bo góc */
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px; /* Thay đổi khoảng cách giữa các mục */
+    position: relative;
+}
+
+.timeline-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(2, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.timeline-content {
+    color: white;
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+/* Sửa phần nối giữa các hình tròn */
+.timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 80px; /* Vị trí bên dưới timeline-circle */
+    left: 40px; /* Giữa tâm của hình tròn */
+    width: 2px;
+    height: 50px; /* Chiều dài đường nối */
+    background-color: white;
+}
+    
+    
+#my-work{
+    color:white;
+    background-color: rgba(255, 157, 0, 0.678);
+}
+#my-work h2{
+    background-color: rgb(2, 0, 0);
+    border-radius: 10px;
+    
+
+}
     .project-image {
         height: 200px;
         object-fit: cover; 
         width: 100%;
         transition: transform 0.3s, box-shadow 0.3s;
         cursor: pointer;
+        padding: 5px;
+        
     }
 
     .project-image:hover {
@@ -98,6 +173,17 @@ body {
     height: 250px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#contact{
+    background-color:rgba(255, 157, 0, 0.678);    
+    
+}
+#formal{
+    background-color: white;
+    border-radius: 10px;
+}
+.text-center{
+    padding-bottom: 20px;
 }
 
 footer {

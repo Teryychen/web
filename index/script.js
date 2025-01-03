@@ -15,3 +15,4 @@ document.querySelectorAll('.project-image').forEach(image => {
         modal.show();
     });
 });
+
