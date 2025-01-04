@@ -3,8 +3,61 @@ body {
     background-image: url(/index/Picture/taurus.jpg);   
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Aleo';
+}
+/* Reset mặc định của trang */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Để tránh cuộn ngang */
+}
+
+/* Vùng hình nền */
+#animated-background {
+    position: fixed; /* Đảm bảo cố định hình nền */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    overflow: hidden; /* Ẩn các phần dư thừa nếu có */
+    z-index: -1; /* Đặt ở phía sau nội dung */
+}
+
+#animated-background img {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa hình */
+    min-width: 100%; /* Đảm bảo chiều rộng tối thiểu là 100% màn hình */
+    min-height: 100%; /* Đảm bảo chiều cao tối thiểu là 100% màn hình */
+    object-fit: cover; /* Hình ảnh sẽ tự động cắt để vừa khít với màn hình */
+}
+
+/* Nội dung trang */
+#content {
+    position: relative;
+    z-index: 1; /* Đặt nội dung phía trên hình nền */
+    padding: 20px;
+    color: #fff; /* Màu chữ trắng để dễ đọc */
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 .hero-section {
     background: none;
     color: white;
@@ -24,64 +77,153 @@ body {
     margin-top: 5px;
     }
 
-   #timeline {
-    background-color: #482203b5; /* Màu nền */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 20px 0;
-    align-items: center;
-}
-
-#timeline h2 {
-    text-align: center;
-    color: white;
-    background-color: rgb(2, 0, 0); /* Màu vàng tiêu đề */
-    padding: 10px 20px;
-    border-radius: 5px; /* Thêm bo góc */
-}
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px; /* Thay đổi khoảng cách giữa các mục */
-    position: relative;
-}
-
-.timeline-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: rgb(2, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.timeline-content {
-    color: white;
-    margin-left: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: none;
-}
-
-/* Sửa phần nối giữa các hình tròn */
-.timeline-item:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 80px; /* Vị trí bên dưới timeline-circle */
-    left: 40px; /* Giữa tâm của hình tròn */
-    width: 2px;
-    height: 50px; /* Chiều dài đường nối */
-    background-color: white;
-}
+    #timeline { 
+        background-color: #482203b5; /* Màu nền */
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 20px 0;
+        
+    }
+    ol, ul {
+        padding-top: 20px;
+        padding-left: 10rem;
+    }
+    .timeline-section{
+        /* align-items: center; */
+        width: 45%;
+    }
+    #timeline h2 {
+        text-align: center;
+        color: white;
+        background-color: rgb(2, 0, 0); /* Màu vàng tiêu đề */
+        padding: 10px 20px;
+        border-radius: 5px; /* Thêm bo góc */
+    }
     
+    .timeline-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px; /* Thay đổi khoảng cách giữa các mục */
+        position: relative;
+    }
+    
+    .timeline-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgb(2, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        line-height: 1.2;
+        text-align: center;
+    }
+    
+    .timeline-content {
+        color: white;
+        margin-left: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: none;
+    }
+    
+    /* Sửa phần nối giữa các hình tròn */
+    .timeline-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 80px; /* Vị trí bên dưới timeline-circle */
+        left: 40px; /* Giữa tâm của hình tròn */
+        width: 2px;
+        height: 50px; /* Chiều dài đường nối */
+        background-color: white;
+    }
+    * Container chính */
+    .timeline-skill-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between; /* Chia đều hai bên */
+        gap: 20px;
+        position: relative; /* Để thêm vạch kẻ */
+    }
+    
+    /* Vạch kẻ dọc */
+    .timeline-skill-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%; /* Vạch kẻ ở giữa container */
+        width: 4px; /* Độ dày vạch */
+        background-color: black; /* Màu vạch */
+        transform: translateX(-50%);
+    }
+    /* Container chính */
+    .timeline-skill-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-around; /* Chia đều hai bên */
+        position: relative; /* Để thêm vạch kẻ */
+    }
+    
+    /* Vạch kẻ dọc */
+    .timeline-skill-container::before {
+        content: "";
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 50%; /* Vạch kẻ ở giữa container */
+        width: 4px; /* Độ dày vạch */
+        background-color: black; /* Màu vạch */
+        transform: translateX(-50%);
+    }
+    
+    /* Skills Section */
+    .skills-section {
+        width: 45%; /* Chiếm 45% chiều rộng */
+        background-color: transparent;
+        align-items: center;
+        padding-right: 2rem;
+    }
+    
+    .skills-section h2 {
+        text-align: center;
+        color: white;
+        background-color: black; /* Nền đen */
+        padding: 10px 10px;
+        border-radius: 2px;
+    }
+    
+    .skills-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+        /* gap: 0px; */
+        justify-items: center; /* Canh giữa các icon */
+        padding-top: 20px;
+    }
+    
+    .skill-item {
+        text-align: center;
+    }
+    
+    .skill-item img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    
+    .skill-item p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    
+
+
     
 #my-work{
     color:white;
@@ -148,7 +290,7 @@ body {
 }
 
 .navbar {
-    background-color: #482203b5;
+    background-color: #321802;
     color: rgb(251, 213, 79);
     font-family: "Audiowide", sans-serif;
 }
@@ -191,3 +333,13 @@ footer {
     color: white;
     padding: 20px 0;
 }
+.social-icons a {
+    font-size: 1.5rem; /* Kích thước icon */
+    text-decoration: none; /* Bỏ gạch chân */
+    transition: transform 0.3s; /* Hiệu ứng hover */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Phóng to khi hover */
+}
+

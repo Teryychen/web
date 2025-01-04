@@ -8,13 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>src="server.js"</script>
     <script src="app.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    
+    <div id="animated-background">
+    <img src="/index/Picture/rock.png" alt="Dynamic Background" id="bg-image">
+    </div>
+
     <!-- Splash Screen -->
     <div id="splash-screen">
         <div class="splash-content">
@@ -23,7 +33,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="position: sticky; top: 0; z-index: 1020;">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="/index/Picture/golden_bird.png" alt="Logo" width="500">
@@ -36,7 +46,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#my-work">My Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/t3rrych3n/" target="_blank">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -51,15 +61,15 @@
         <div class="content">
             <h1>Welcome to Terry Channel</h1>
             <p>Media Designer | Creator | Innovator</p>
-            <a href="#portfolio" class="btn btn-primary">Explore My Work</a>
+            <a href="#my-work" class="btn btn-primary">Explore My Work</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container py-5 ">
+    <section id="about" class="container py-5 fade-in ">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h2>About Me</h2>
+                <h2 style=" font-family: 'Agbalumo';">About Me</h2>
                 <p>Hello! I'm Terry, passionate about creating visually stunning designs. With experience in digital painting, 3D model & animation, and interactive media, I strive to bring concepts to life with a unique perspective.</p>
             </div>
             <div class="col-md-6 text-center">
@@ -68,31 +78,61 @@
         </div>
         
     </section>
-    <section id="timeline" class="container">
-        <h2 class="container">My Journey</h2>
-        <ul class="timeline-list">
-            <li class="timeline-item">
-                <div class="timeline-circle">2021<br>|<br>2022</div>
-                <div class="timeline-content">First year of NUTC</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-circle">2022<br>|<br>2023</div>
-                <div class="timeline-content">Second year of NUTC</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-circle">2023<br>|<br>2024</div>
-                <div class="timeline-content">Third year of NUTC</div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-circle">2024<br>|<br>2025</div>
-                <div class="timeline-content">Graduate with bachelor's degree</div>
-            </li>
-        </ul>
-    </section>
+   <section id="timeline" class="container fade-in">
+    <div class="timeline-skill-container">
+        <!-- My Journey Section -->
+        <div class="timeline-section">
+            <h2 style=" font-family: 'Agbalumo';">My Journey</h2>
+            <ul class="timeline-list">
+                <li class="timeline-item">
+                    <div class="timeline-circle">2021<br>|<br>2022</div>
+                    <div class="timeline-content">First year of NUTC</div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-circle">2022<br>|<br>2023</div>
+                    <div class="timeline-content">Second year of NUTC</div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-circle">2023<br>|<br>2024</div>
+                    <div class="timeline-content">Third year of NUTC</div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-circle">2024<br>|<br>2025</div>
+                    <div class="timeline-content">Graduate with bachelor's degree</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills-section">
+            <h2 style=" font-family: 'Agbalumo';">Skills</h2>
+            <div class="skills-icons">
+                <div class="skill-item">
+                    <img src="/index/Picture/Ai.png" alt="Illustrator Icon">
+                    <p>AI (Illustrator)</p>
+                </div>
+                <div class="skill-item">
+                    <img src="/index/Picture/Ps.png" alt="Photoshop Icon">
+                    <p>Ps (Photoshop)</p>
+                </div>
+                <div class="skill-item">
+                    <img src="/index/Picture/Maya.png" alt="Maya Icon">
+                    <p>Maya (3D)</p>
+                </div>
+                <div class="skill-item">
+                    <img src="/index/Picture/Ae.png" alt="After Effects Icon">
+                    <p>Ae (After Effects)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
 
     <!-- My Work Section -->
-    <section id="my-work" class="container py-5">
-        <h2 class="text-center text-light mb-2 pt-2">My Work</h2>
+    <section id="my-work" class="container py-5 fade-in">
+        <h2 class="text-center text-light mb-2 pt-2" style=" font-family: 'Agbalumo';">My Work</h2>
         <div class="accordion" id="workAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingMaya">
@@ -231,9 +271,9 @@
     </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="container py-3">
+    <section id="contact" class="container fade-in">
         <div id="formal">
-            <h2 class="text-center mb-4 pt-5">CONTACT ME</h2>
+            <h2 class="text-center mb-4 pt-4">CONTACT ME</h2>
             <form>
                 <div class="row">
                     <div class="col-md-6 mb-3 ms-3">
@@ -249,7 +289,7 @@
                     <label for="message" class="form-label">Message</label>
                     <textarea id="message" class="form-control" rows="4" placeholder="Your message"></textarea>
                 </div>
-                <div class="text-center"> <!-- Thêm div này -->
+                <div class="text-center">
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </div>
             </form>
@@ -258,9 +298,22 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-3">
-        <p>&copy; 2025 Media Designer. All Rights Reserved.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="social-icons mb-2">
+            <a href="https://www.facebook.com/profile.php?id=61562432717513" target="_blank" class="text-white me-3">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/t3rrych3n/" target="_blank" class="text-white me-3">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://discord.com/channels/1172659079869640804/1188117082517295154" target="_blank" class="text-white">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+        <p class="m-0">Designer | Media | Artist</p>
+        <p class="m-0">© 2025 Media Designer. All Rights Reserved.</p>
     </footer>
+    
 
     <script src="app.js"></script>
 </body>
