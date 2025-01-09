@@ -44,5 +44,22 @@ gsap.to("#bg-image", {
     }
 });
 
+
+// Fetch projects from the server
+fetch("/services")
+  .then(response => response.json())
+  .then(data => {
+    const projectContainer = document.getElementById("project-container");
+    data.forEach(project => {
+      const projectElement = document.createElement("div");
+      projectElement.innerHTML = `
+        <img src="${project.imgSrc}" alt="${project.modal}" />
+        <p>${project.modal}</p>
+      `;
+      projectContainer.appendChild(projectElement);
+    });
+  })
+  .catch(err => console.error("Error fetching services:", err));
+
   
 
