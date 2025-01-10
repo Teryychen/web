@@ -8,6 +8,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+const port = 3000;
 
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Server chạy tại: http://127.0.0.1:${PORT}`));
+
+
+
+
+
+
+
+// Chạy server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
