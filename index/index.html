@@ -16,14 +16,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>src="server.js"</script>
-    <script src="app.js" defer></script>
+    
     <script src="script.js" defer></script>
-    <script>src="bs5vue.js"</script>
+    
 </head>
 
 <body>
     <div id="animated-background">
-    <img src="/index/Picture/rock.png" alt="Dynamic Background" id="bg-image">
+    <img src="./Picture/rock.png" alt="Dynamic Background" id="bg-image">
     </div>
 
     <!-- Splash Screen -->
@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="position: sticky; top: 0; z-index: 1020;">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/index/Picture/golden_bird.png" alt="Logo" width="500">
+                <img src="./Picture/golden_bird.png" alt="Logo" width="500">
             </a>
             <h2>STUDIO OF TERRY</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -57,7 +57,7 @@
     <!-- Hero Section -->
     <header id="home" class="hero-section">
         <video autoplay muted loop id="background-video">
-            <source src="video/Ae1.mp4" type="video/mp4">
+            <source src="./video/Ae1.mp4" type="video/mp4">
         </video>
         <div class="content">
             <h1>Welcome to Terry Channel</h1>
@@ -74,7 +74,7 @@
                 <p>Hello! I'm Terry, passionate about creating visually stunning designs. With experience in digital painting, 3D model & animation, and interactive media, I strive to bring concepts to life with a unique perspective.</p>
             </div>
             <div class="col-md-6 text-center">
-                <img src="/index/Picture/head.jpg"About Me Image class="rounded-circle about-img">
+                <img src="./Picture/head.jpg"About Me Image class="rounded-circle about-img">
             </div>
         </div>
         
@@ -109,19 +109,19 @@
             <h2 style=" font-family: 'Agbalumo';">Skills</h2>
             <div class="skills-icons">
                 <div class="skill-item">
-                    <img src="/index/Picture/Ai.png" alt="Illustrator Icon">
+                    <img src="./Picture/Ai.png" alt="Illustrator Icon">
                     <p>AI (Illustrator)</p>
                 </div>
                 <div class="skill-item">
-                    <img src="/index/Picture/Ps.png" alt="Photoshop Icon">
+                    <img src="./Picture/Ps.png" alt="Photoshop Icon">
                     <p>Ps (Photoshop)</p>
                 </div>
                 <div class="skill-item">
-                    <img src="/index/Picture/Maya.png" alt="Maya Icon">
+                    <img src="./Picture/Maya.png" alt="Maya Icon">
                     <p>Maya (3D)</p>
                 </div>
                 <div class="skill-item">
-                    <img src="/index/Picture/Ae.png" alt="After Effects Icon">
+                    <img src="./Picture/Ae.png" alt="After Effects Icon">
                     <p>Ae (After Effects)</p>
                 </div>
             </div>
@@ -146,29 +146,29 @@
                         <div class="container ms-3 mt-3">
                         <p>About my Maya projects.</p>
                     </div>
-                        <div  v-for="project in Portfolio" :key="project.id" class="col-md-3 mb-4">
-                            <img :src="project.imgSrc" :alt="project.id" class="img-fluid project-image">
+                        <div class="col-md-3 mb-4">
+                            <img src="./Picture/13.jpg" alt="Maya Project 1" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/14.jpg" alt="Maya Project 2" class="img-fluid project-image">
+                            <img src="./Picture/14.jpg" alt="Maya Project 2" class="img-fluid project-image">
                         </div>
                          <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/12.jpg" alt="Maya Project 3" class="img-fluid project-image">
+                            <img src="./Picture/12.jpg" alt="Maya Project 3" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/gr4.png" alt="Maya Project 4" class="img-fluid project-image">
+                            <img src="./Picture/gr4.png" alt="Maya Project 4" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/gr5.png" alt="Maya Project 5" class="img-fluid project-image">
+                            <img src="./Picture/gr5.png" alt="Maya Project 5" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/gr3.png" alt="Maya Project 6" class="img-fluid project-image">
+                            <img src="./Picture/gr2.png" alt="Maya Project 6" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/water5.png" alt="Maya Project 7" class="img-fluid project-image">
+                            <img src="./Picture/water5.png" alt="Maya Project 7" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/water4.png" alt="Maya Project 8" class="img-fluid project-image">
+                            <img src="./Picture/water4.png" alt="Maya Project 8" class="img-fluid project-image">
                         </div>
                         
                     </div>
@@ -187,28 +187,28 @@
                             <p>About my Photoshop & Illustrator projects.</p>
                         </div>
                          <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/magic.png" alt="Photoshop Project 1" class="img-fluid project-image">
+                            <img src="./Picture/magic.png" alt="Photoshop Project 1" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/water.png" alt="Photoshop Project 2" class="img-fluid project-image">
+                            <img src="./Picture/water.png" alt="Photoshop Project 2" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/water2.png" alt="Photoshop Project 3" class="img-fluid project-image">
+                            <img src="./Picture/water2.png" alt="Photoshop Project 3" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/Brown.jpg" alt="Photoshop Project 4" class="img-fluid project-image">
+                            <img src="./Picture/Brown.jpg" alt="Photoshop Project 4" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/1.png" alt="Photoshop Project 5" class="img-fluid project-image">
+                            <img src="./Picture/1.jpg" alt="Photoshop Project 5" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/9.jpeg" alt="Photoshop Project 6" class="img-fluid project-image">
+                            <img src="./Picture/9.jpeg" alt="Photoshop Project 6" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/3.jpg" alt="Photoshop Project 7" class="img-fluid project-image">
+                            <img src="./Picture/3.jpg" alt="Photoshop Project 7" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/gr2.png" alt="Photoshop Project 8" class="img-fluid project-image">
+                            <img src="./Picture/gr2.png" alt="Photoshop Project 8" class="img-fluid project-image">
                         </div>
                     </div>
                 </div>
@@ -226,28 +226,28 @@
                             <p>About my Procreate projects.</p>
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait1.jpg" alt="Procreate Project 1" class="img-fluid project-image">
+                            <img src="./Picture/portrait1.jpg" alt="Procreate Project 1" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait2.jpg" alt="Procreate Project 2" class="img-fluid project-image">
+                            <img src="./Picture/portrait2.jpg" alt="Procreate Project 2" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait3.jpg" alt="Procreate Project 3" class="img-fluid project-image">
+                            <img src="./Picture/portrait3.jpg" alt="Procreate Project 3" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait4.jpg" alt="Procreate Project 4" class="img-fluid project-image">
+                            <img src="./Picture/portrait4.jpg" alt="Procreate Project 4" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/view1.jpg" alt="Procreate Project 5" class="img-fluid project-image">
+                            <img src="./Picture/portrait5.jpg" alt="Procreate Project 5" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/view2.jpg" alt="Procreate Project 6" class="img-fluid project-image">
+                            <img src="./Picture/portrait6.jpg" alt="Procreate Project 6" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait6.jpg" alt="Procreate Project 7" class="img-fluid project-image">
+                            <img src="./Picture/view1.jpg" alt="Procreate Project 7" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/portrait5.jpg" alt="Procreate Project 1" class="img-fluid project-image">
+                            <img src="./Picture/view2.jpg" alt="Procreate Project 1" class="img-fluid project-image">
                         </div>
                     </div>
                 </div>
@@ -316,7 +316,7 @@
     </footer>
     
 
-    <script src="app.js"></script>
+   
 </body>
 
 </html>
