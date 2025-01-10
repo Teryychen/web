@@ -18,6 +18,7 @@
     <script>src="server.js"</script>
     <script src="app.js" defer></script>
     <script src="script.js" defer></script>
+    <script>src="bs5vue.js"</script>
 </head>
 
 <body>
@@ -145,8 +146,8 @@
                         <div class="container ms-3 mt-3">
                         <p>About my Maya projects.</p>
                     </div>
-                        <div class="col-md-3 mb-4">
-                            <img src="/index/Picture/13.jpg" alt="Maya Project 1" class="img-fluid project-image">
+                        <div  v-for="project in Portfolio" :key="project.id" class="col-md-3 mb-4">
+                            <img :src="project.imgSrc" :alt="project.id" class="img-fluid project-image">
                         </div>
                         <div class="col-md-3 mb-4">
                             <img src="/index/Picture/14.jpg" alt="Maya Project 2" class="img-fluid project-image">

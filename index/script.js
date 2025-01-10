@@ -63,3 +63,24 @@ fetch("/services")
 
   
 
+const vueProfolio = Vue.createApp({
+    data() {
+        return {
+            Portfolio: []
+        };
+    },
+    mounted() {
+        // Gửi yêu cầu AJAX để nhận dữ liệu
+        $.ajax({
+            url: "/profolio", // API trả về JSON từ server
+            method: "get",
+            dataType: "json",
+            success: (results) => {
+                this.Portfolio = results; // Gán dữ liệu vào Portfolio
+            },
+            error: (err) => {
+                console.error("Lỗi khi lấy dữ liệu:", err);
+            }
+        });
+    }
+}).mount("#my-work");
