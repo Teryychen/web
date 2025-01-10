@@ -9,19 +9,19 @@ app.use(cors());
 
 // Middleware
 const bodyParser = require("body-parser");
-app.use(bodyParser.json()); // Để phân tích dữ liệu JSON
-app.use(bodyParser.urlencoded({ extended: true })); // Để phân tích dữ liệu từ form
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 
-// API để nhận dữ liệu liên hệ
+
 app.post("/contact_me", (req, res) => {
-    // Xử lý dữ liệu từ req.body
+    
     const { name, email, message } = req.body;
     if (!name || !email || !message) {
         return res.status(400).json({ error: "Please fill in all fields." });
     }
 
-    // Thêm dữ liệu vào database hoặc xử lý như mong muốn
+   
     ContactDB.insert({ name, email, message, timestamp: new Date() })
         .then(() => {
             res.status(200).json({ success: "Message sent successfully!" });
@@ -31,14 +31,14 @@ app.post("/contact_me", (req, res) => {
         });
 });
 
-// Khởi động server
+
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
 
 app.post("/contact_me", (req, res) => {
-    console.log(req.body); // Xem dữ liệu gửi lên từ frontend
-    // Tiếp tục xử lý...
+    console.log(req.body); 
+   
 });
 

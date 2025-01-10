@@ -5,13 +5,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // Kiểm tra tất cả các trường đều có dữ liệu
+    
     if (!name || !email || !message) {
         alert("Please fill in all fields.");
         return;
     }
 
-    // Gửi dữ liệu qua AJAX nếu tất cả đều hợp lệ
+
     fetch("/contact_me", {
         method: "POST",
         headers: {
@@ -23,7 +23,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     .then(response => {
         if (response.ok) {
             alert("Your message has been sent!");
-            document.getElementById("contactForm").reset(); // Reset form
+            document.getElementById("contactForm").reset(); 
         } else {
             alert("There was an error. Please try again later.");
         }
